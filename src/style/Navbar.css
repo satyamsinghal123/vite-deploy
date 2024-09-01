@@ -1,0 +1,256 @@
+@font-face {
+  font-family: p;
+  src: url("../components/Fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  height: 25vh;
+  width: 100;
+  display: flex;
+  gap: 3vw;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #6189b1;
+}
+
+.Logo {
+  margin-left: 3vw;
+}
+
+nav i {
+  cursor: pointer;
+  transition: all ease-in .3s;
+}
+
+nav i:hover {
+  color: rgb(62, 57, 57);
+}
+
+.nav2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.action-container {
+  width: 100%;
+  padding: 10px 0 15px 0;
+  border-bottom: 1px solid #ecf1f5;
+}
+
+.action {
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+}
+
+.action a:hover {
+  color: rgb(62, 57, 57);
+}
+.action a {
+  position: relative; /* Ensure the pseudo-element is positioned relative to this link */
+  text-decoration: none;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #ecf1f5;
+  text-align: center;
+  font-family: p;
+  letter-spacing: 2px;
+  transition: all ease 1s;
+  display: inline-block; /* Make the link an inline-block element */
+}
+
+.action a::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* Start the line from the center */
+  bottom: -5px; /* Adjust this value to move the underline further away from the text */
+  width: 0; /* Start with a width of 0 */
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease, left 0.3s ease; /* Animate width and position */
+  transform: translateX(-50%);
+}
+
+.action a:hover::after {
+  width: 100%; /* Expand the width to 100% on hover */
+  left: 50%; /* Keep it centered */
+  transform: translateX(-50%);
+}
+
+.contact-number {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.nav-contact-elem {
+  margin-top: 8px;
+  margin-right: 130px;
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  gap: 10px;
+  color: #ecf1f5;
+  font-family: p;
+}
+
+.nav-contact-elem span {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+.fa-bars {
+  margin-left: 20px;
+  display: none;
+  color: #ecf1f5;
+}
+
+@media (max-width: 904px) {
+  .action {
+    display: none;
+  }
+
+  .action-container {
+    display: none;
+  }
+
+  .fa-bars {
+    display: block;
+    font-size: 1.3em;
+  }
+
+  .nav-contact-elem {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 654px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .Logo {
+    margin: 0;
+    margin-bottom: 10px;
+    max-width: 50%;
+  }
+
+  .fa-bars {
+    display: block;
+    font-size: 1.5em;
+    margin-right: auto;
+    margin-left: 10px;
+  }
+
+  .nav-contact-elem {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+
+  .nav-contact-elem span p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .action {
+    display: none;
+  }
+
+  .action-container {
+    display: none;
+  }
+}
+
+@media (max-width: 503px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .Logo {
+    margin: 0 auto 10px;
+    max-width: 60%;
+  }
+
+  .nav-contact-elem {
+    flex-direction: row;
+    width: 90%;
+  }
+
+  .fa-bars {
+    align-self: flex-start;
+    margin-left: 10px;
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 258px) {
+  .nav-contact-elem {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1115px) {
+  .action a {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 1418px) {
+  .action {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 1184px) {
+  .action {
+    padding: 0 0;
+  }
+}
+
+@media (max-width: 1022px) {
+  .action a {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 968px) {
+  .action {
+    gap: 20px;
+  }
+}
+/*
+@media (max-width : 638px) {
+    .Logo{
+        width: 40vw;
+    }
+
+    .nav-contact-elem{
+        font-size: 1rem;
+    }
+}
+@media (max-width : 494px) {
+    .Logo{
+        width: 35vw;
+    }
+}
+
+@media (max-width : 450px) {
+    .nav-contact-elem{
+        font-size: 0.8rem;
+    }
+} */

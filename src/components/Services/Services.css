@@ -1,0 +1,102 @@
+@font-face {
+  font-family: p3;
+  src: url("../Fonts/Palanquin/Palanquin-Light.ttf");
+}
+body {
+  font-family: "Georgia", serif;
+  background-color: #fffef3;
+  margin: 0;
+  padding: 0;
+}
+.services-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+.breadcrumb {
+  font-size: 1.9em;
+  color: #ecf1f5;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+.service-heading {
+  font-size: 3em;
+  color: #ecf1f5;
+  position: relative;
+  margin-bottom: 20px;
+}
+.services-cancer::after {
+  content: "";
+  display: block;
+  width: 16%;
+  height: 2px;
+  background-color: #aaa;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+.service-description {
+  font-size: 1.2em;
+  font-family: p3;
+  line-height: 1.8;
+  color: #ecf1f5;
+  margin-bottom: 40px;
+}
+.service-actions {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+.service-actions a {
+  font-size: 1.2em;
+  color: #ecf1f5;
+  text-decoration: none;
+  border-bottom: 2px solid #ecf1f5;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+.service-actions a:hover {
+  color: #000;
+  border-bottom-color: #000;
+}
+
+/* animation */
+
+.service-heading {
+  opacity: 0;
+  animation: ServicefadeIn 1.5s ease-in-out;
+  animation-fill-mode: both;
+}
+
+.service-description {
+  opacity: 0;
+  animation: ServicefadeIn 1.5s ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes ServicefadeIn {
+  from {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+
+/* media query */
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  .service-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .service-actions a {
+    margin-bottom: 20px;
+  }
+}

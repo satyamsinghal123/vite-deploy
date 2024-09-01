@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Times New Roman", serif;
+  margin: 0; /* Ensure there's no default margin that could cause overlap */
+  padding: 0;
+}
+
+.footer-container {
+  width: 100%;
+  /* min-height: 100vh; Ensures that the footer takes up the full viewport height */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: #6189B1;
+  /* padding-bottom: 20px; Add some padding at the bottom to avoid overlap */
+}
+
+.footer {
+  background: linear-gradient(#6189B1 , #ACCCE3);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 0;
+}
+
+.newsletter-section h1 {
+  text-align: start;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  margin-left: 7vw;
+}
+
+.newsletter-section p {
+  text-align: start;
+  font-size: 1.7rem;
+  font-style: italic;
+  margin-bottom: 20px;
+  margin-left: 7vw;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-left: 7vw;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 15px;
+  width: 80% !important;
+  height: 10vh;
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 10px;
+  color: white;
+  margin-right: 10px;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  font-size: 1.4rem;
+}
+
+.newsletter-form input::placeholder{
+  color: white;
+}
+
+.newsletter-form button {
+  padding: 17px 25px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 23px;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: all ease-in .4s;
+}
+
+.newsletter-form button:hover{
+  color: black;
+  background-color: white;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  margin: 10px;
+  min-width: 250px; /* Ensures sections don't get too narrow */
+}
+
+.footer-left p,
+.footer-center p,
+.footer-right p {
+  margin: 5px 0;
+  text-align: start;
+}
+
+.footer-left a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-left p {
+  margin-left: 7vw;
+}
+
+.footer-center p {
+  text-align: center;
+}
+.footer-left hr {
+  width: 50px;
+  margin: 15px auto;
+  border-color: white;
+}
+
+.footer-center .brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.footer-right a {
+  color: white;
+  text-decoration: none;
+  text-align: end;
+}
+
+.footer-right p {
+  text-align: end;
+  margin-right: 5vw;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
+  margin-right: 5vw;
+}
+
+.social-icons i {
+  margin: 0 14px;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all ease-in .3s;
+}
+
+.social-icons i:hover{
+  color: rgb(62, 57, 57);
+
+}
+
+.social-icons a:hover {
+  color: #ccc;
+}
+
+.doctify {
+  color: #03a9f4;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input[type="email"] {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+  .newsletter-form input::placeholder{
+    font-size: 1.3rem;
+  }
+
+  
+
+  .newsletter-form button {
+    width: 100%;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    margin: 20px 0;
+  }
+
+  .footer-center .brand {
+    font-size: 1.8rem;
+  }
+
+  .footer-center p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1079px) {
+  .newsletter-form button {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 870px) {
+  .newsletter-form button {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 835px) {
+  .newsletter-form button {
+    font-size: 1.2rem;
+  }
+  .newsletter-form input[type="email"] {
+    height: 9vh;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .newsletter-form button {
+    font-size: 1.2rem;
+    padding: 16px 20px;
+  }
+  .newsletter-form input[type="email"] {
+    height: 9vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .newsletter-section p {
+    font-size: 0.9rem;
+  }
+
+  .newsletter-form input[type="email"] {
+    padding: 12px;
+
+  }
+
+  .newsletter-form button {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .footer-left p,
+  .footer-center p,
+  .footer-right p {
+    font-size: 0.9rem;
+  }
+
+  .footer-center .brand {
+    font-size: 1.4rem;
+  }
+
+  .social-icons a {
+    font-size: 1rem;
+  }
+}

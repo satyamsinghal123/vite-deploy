@@ -1,0 +1,147 @@
+@font-face {
+  font-family: p2;
+  src: url("../Fonts/Palanquin/Palanquin-Light.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.About-container {
+  width: 100%;
+  padding: 20px;
+  background-color: #6189b1;
+}
+
+.About-container h3 {
+  color: #ecf1f5;
+  font-size: 4rem;
+  letter-spacing: 7px;
+}
+
+.About-container p {
+  color: #ecf1f5;
+  font-family: p2;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.About-container p:nth-child(3) {
+  font-size: 1.4rem;
+}
+
+.About-us {
+  overflow: hidden;
+  padding: 0 6vw;
+}
+
+.About-us-box {
+  margin-top: 20vh;
+  padding: 25px 50px;
+  border-radius: 30px;
+  background-color: #c4dbeb;
+}
+
+.About-us-box h3 {
+  letter-spacing: 1px;
+  font-size: 3rem;
+  color: black;
+}
+
+.About-us-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.About-us-head img {
+  position: relative;
+  top: -100px;
+  width: 250px;
+  clip-path: circle();
+}
+
+.About-us-head h3 span {
+  border-bottom: 3px solid black;
+  padding-bottom: 8vh;
+}
+
+.About-us-text p {
+  color: black;
+}
+
+/* animation */
+.About-us-box {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out;
+  animation-fill-mode: both;
+}
+
+.About-us>h3{
+  opacity: 1;
+  animation: abfadeIn 1.5s ease-in-out;
+} 
+
+.About-us p{
+  opacity: 1;
+  animation: abfadeIn 1.5s ease-in-out;
+
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes abfadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* media query */
+
+
+@media (max-width: 774px) {
+  .About-us-head img {
+    position: static;
+  }
+  .About-us-head {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+  .About-us-head h3{
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .About-us-head h3 span{
+    border: none;
+  }
+}
+
+@media (max-width: 453px) {
+  .About-us-head h3 {
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .About-us-text {
+    text-align: center;
+  }
+}
+@media (max-width: 397px) {
+  .About-us-head h3 {
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+  }
+}

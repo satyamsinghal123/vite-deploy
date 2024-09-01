@@ -1,0 +1,281 @@
+@font-face {
+  font-family: p;
+  src: url("../Fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: light;
+  src: url("../Fonts/Palanquin/Palanquin-Light.ttf");
+}
+
+@font-face {
+  font-family: bold;
+  src: url("../Fonts/Palanquin/Palanquin-Medium.ttf");
+}
+
+body {
+  background-color: #6189b1;
+  margin: 0;
+  padding: 0;
+}
+
+.Contact-container {
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #6189b1;
+}
+.Contact-container h3 {
+  font-size: 4rem;
+  font-family: p;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  word-spacing: 6px;
+  color: #ecf1f5;
+}
+
+.Contact-container h3 span {
+  border-bottom: 3px solid #ecf1f5;
+}
+
+.contact-section {
+  display: flex;
+  margin-top: 40px;
+}
+.contact-form {
+  flex: 0 0 48%;
+  color: #ecf1f5;
+}
+.contact-form h3 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #ecf1f5;
+}
+.contact-form p {
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #ecf1f5;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  font-family: "Georgia", serif;
+  color: #ecf1f5;
+}
+
+.contact-info {
+  background-color: #c4dbeb;
+  padding: 50px 15px;
+  border-radius: 14px;
+}
+.contact-info h3 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: p;
+  font-weight: 300;
+  text-transform: initial;
+}
+.contact-info p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #666;
+  line-height: 1.6;
+  font-family: bold;
+}
+.contact-info i {
+  margin-right: 10px;
+  color: #666;
+}
+.contact-info .info-item {
+  margin-bottom: 20px;
+}
+
+.contact-form form input {
+  background-color: #6189b1;
+}
+
+.contact-form h3{
+  text-transform: initial;
+}
+
+/* Remove spinner controls for input type="number" */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Hide the spinner controls in Firefox */
+}
+
+
+
+
+/* animation */
+
+.contact-form {
+  opacity: 0;
+  animation: ContactfadeIn 1.5s ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes ContactfadeIn {
+  from {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.contact-info {
+  opacity: 0;
+  animation: ContactinfofadeIn 1.5s ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes ContactinfofadeIn {
+  from {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+/* media query */
+
+@media (max-width: 768px) {
+  .Contact-container {
+    width: 90%;
+  }
+  .contact-section {
+    flex-direction: column;
+  }
+  .contact-form,
+  .contact-info {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  .contact-info {
+  }
+}
+
+.form-con input {
+  border: none;
+  background: transparent;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #ecf1f5;
+  color: #ecf1f5;
+}
+
+.form-con input:focus {
+  background: transparent;
+  outline: none; /* Remove the blue outline */
+  border: none; /* Remove the blue border */
+}
+
+
+
+/* You can also change the color of the input label when focused */
+.form-con input:focus + label {
+  background: transparent;
+}
+
+.form-floating input:hover {
+  outline: none !important;
+}
+
+.info-item {
+  margin-left: 20px;
+  display: flex;
+}
+
+.info-item i {
+  font-size: 1.4rem;
+  margin-top: 1vh;
+}
+
+.info-item-parti strong{
+  font-family: p;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+}
+
+.Sumbit {
+  border: none;
+  font-size: 1.4rem;
+  padding: 5px 0;
+  text-transform: uppercase;
+  color: #ecf1f5;
+  background: transparent;
+  border-bottom: 1px solid #ecf1f5;
+  transition: all ease-in .3s;
+
+}
+
+.Sumbit:hover{
+  color: #333;
+  border-bottom: none;
+}
+
+@media (max-width: 522px) {
+  .contact-h3 {
+    font-size: 11vw;
+  }
+}
+
+@media (max-width: 426px) {
+  .mail p {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width :512px) {
+  .Contact-container h3{
+    font-size: 3.4rem;
+  }
+  .contact-form h3{
+    font-size: 2rem;
+  }
+}
+
+@media (max-width :446px) {
+  .Contact-container h3{
+    font-size: 3rem;
+  }
+  .contact-form h3{
+    font-size: 2rem;
+  }
+}
+
+@media (max-width :402px) {
+  .Contact-container h3{
+    font-size: 2.6rem;
+  }
+  .contact-form h3{
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width :358px) {
+  .Contact-container h3{
+    font-size: 11vw;
+  }
+  .contact-form h3{
+    font-size: 8vw;
+  }
+}
+
